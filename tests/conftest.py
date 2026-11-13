@@ -17,14 +17,14 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 
-from onceonly import IdempotencyKeys, Outbox
+from oncely import IdempotencyKeys, Outbox
 
 DATABASE_URL = os.environ.get(
-    "ONCEONLY_TEST_DATABASE_URL",
-    "postgresql+asyncpg://onceonly:onceonly@localhost:5432/onceonly_test",
+    "ONCELY_TEST_DATABASE_URL",
+    "postgresql+asyncpg://oncely:oncely@localhost:5432/oncely_test",
 )
-REDIS_URL = os.environ.get("ONCEONLY_TEST_REDIS_URL", "redis://localhost:6379/14")
-SCHEMA = "onceonly_test"
+REDIS_URL = os.environ.get("ONCELY_TEST_REDIS_URL", "redis://localhost:6379/14")
+SCHEMA = "oncely_test"
 
 metadata = MetaData(schema=SCHEMA)
 keys = IdempotencyKeys(metadata)
