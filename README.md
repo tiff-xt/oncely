@@ -1,7 +1,7 @@
 # onceonly
 
 [![CI](https://github.com/tiff-xt/onceonly/actions/workflows/ci.yml/badge.svg)](https://github.com/tiff-xt/onceonly/actions/workflows/ci.yml)
-[![PyPI](https://img.shields.io/pypi/v/onceonly)](https://pypi.org/project/onceonly/)
+[![PyPI](https://img.shields.io/pypi/v/onceonly-py)](https://pypi.org/project/onceonly-py/)
 
 Idempotency keys and a transactional outbox for async SQLAlchemy and Postgres.
 
@@ -20,10 +20,10 @@ purchase and every payment.
 ## Install
 
 ```bash
-pip install "onceonly[redis]"
+pip install "onceonly-py[redis]"
 ```
 
-The `redis` extra adds a Redis Streams publisher and consumer. Without it the
+The package installs as `onceonly-py` and imports as `onceonly`. The `redis` extra adds a Redis Streams publisher and consumer. Without it the
 package needs only SQLAlchemy 2 and a Postgres driver such as asyncpg.
 
 ## Idempotency keys

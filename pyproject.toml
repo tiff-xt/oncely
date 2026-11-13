@@ -1,5 +1,5 @@
 [project]
-name = "onceonly"
+name = "onceonly-py"
 version = "0.1.0"
 description = "Idempotency keys and a transactional outbox for async SQLAlchemy and Postgres."
 readme = "README.md"
